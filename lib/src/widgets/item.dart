@@ -62,21 +62,27 @@ class _CoffeeItemState extends State<CoffeeItem> {
                   )
                 : Container(
                     decoration: BoxDecoration(
-                      border: Border.all(color: Color(0xFF85C3DE)), 
+                      border: Border.all(color: Color(0xFF85C3DE)),
+                      borderRadius: BorderRadius.circular(15.0)
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        IconButton(
-                          icon: const Icon(Icons.remove),
-                          onPressed: _decrementQuantity,
-                        ),
-                        Text('$_quantity'),
-                        IconButton(
-                          icon: const Icon(Icons.add),
-                          onPressed: _incrementQuantity,
-                        ),
-                      ],
+                    child: Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min, 
+                        children: [
+                          IconButton(
+                            icon: const Icon(Icons.remove),
+                            onPressed: _decrementQuantity,
+                            padding: const EdgeInsets.symmetric(horizontal: 5.0), 
+                          ),
+                          Text('$_quantity'),
+                          IconButton(
+                            icon: const Icon(Icons.add),
+                            onPressed: _incrementQuantity,
+                            padding: const EdgeInsets.symmetric(horizontal: 5.0), 
+                          ),
+                        ],
+                      ),
                     ),
                   ),
           ],
@@ -84,4 +90,4 @@ class _CoffeeItemState extends State<CoffeeItem> {
       ),
     );
   }
-}
+}  
