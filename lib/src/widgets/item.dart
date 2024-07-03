@@ -33,9 +33,12 @@ class _CoffeeItemState extends State<CoffeeItem> {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Colors.white,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Image.asset(
               widget.imageUrl,
@@ -45,12 +48,14 @@ class _CoffeeItemState extends State<CoffeeItem> {
             ),
             const SizedBox(height: 8),
             Text(widget.name, style: const TextStyle(fontSize: 18)),
-            const SizedBox(height: 4),
-            const Spacer(),
+            const SizedBox(height: 16),
             _quantity == 0
                 ? ElevatedButton(
                     onPressed: _incrementQuantity,
                     child: Text(widget.price),
+                    style: ButtonStyle(
+                      backgroundColor: WidgetStateProperty.all<Color>(Color(0xFF85C3DE)), 
+                    ),
                   )
                 : Row(
                     mainAxisAlignment: MainAxisAlignment.center,

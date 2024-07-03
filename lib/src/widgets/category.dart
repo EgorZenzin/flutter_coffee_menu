@@ -6,7 +6,7 @@ import 'package:flutter_coffee_menu/src/data/coffee_data.dart';
 class CategorySection extends StatelessWidget {
   final String title;
 
-  const CategorySection({Key? key, required this.title}) : super(key: key);
+  const CategorySection({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +25,9 @@ class CategorySection extends StatelessWidget {
           physics: const NeverScrollableScrollPhysics(),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            crossAxisSpacing: 32.0,
-            mainAxisSpacing: 16.0,
-            childAspectRatio: 0.65,
+            crossAxisSpacing: 8,
+            mainAxisSpacing: 8,
+            childAspectRatio: 0.55,
           ),
           itemCount: coffeeItems.length,
           itemBuilder: (context, index) => CoffeeItem(
