@@ -107,6 +107,18 @@ class _CoffeeShopPageState extends State<CoffeeShopPage> with SingleTickerProvid
     );
   }
 
+  void _onVisibilityChanged(String category, bool visible) {
+    if (_isTabClick) return;
+
+    final index = categories.indexOf(category);
+    if (index != -1 && visible) {
+      setState(() {
+        _selectedCategoryIndex = index;
+        _tabController.index = index;
+      });
+      _scrollTabBarToIndex(index);
+    }
+  }
 
    @override
   Widget build(BuildContext context) {
@@ -156,6 +168,9 @@ class _CoffeeShopPageState extends State<CoffeeShopPage> with SingleTickerProvid
                     child: VisibilityDetector(
                       key: Key(category),
                       onVisibilityChanged: (visibilityInfo) {
+                        if (visibilityInfo.visibleFraction > 0.8) {
+                          _onVisibilityChanged(category, true);
+                        }
                       },
                       child: CategorySection(title: category),
                     ),
