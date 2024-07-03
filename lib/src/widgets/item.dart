@@ -52,7 +52,10 @@ class _CoffeeItemState extends State<CoffeeItem> {
             _quantity == 0
                 ? ElevatedButton(
                     onPressed: _incrementQuantity,
-                    child: Text(widget.price),
+                    child: Text(
+                      widget.price, 
+                      style: TextStyle(color: Colors.white) 
+                    ),
                     style: ButtonStyle(
                       backgroundColor: WidgetStateProperty.all<Color>(Color(0xFF85C3DE)), 
                     ),
