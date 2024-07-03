@@ -57,19 +57,24 @@ class _CoffeeItemState extends State<CoffeeItem> {
                       backgroundColor: WidgetStateProperty.all<Color>(Color(0xFF85C3DE)), 
                     ),
                   )
-                : Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconButton(
-                        icon: const Icon(Icons.remove),
-                        onPressed: _decrementQuantity,
-                      ),
-                      Text('$_quantity'),
-                      IconButton(
-                        icon: const Icon(Icons.add),
-                        onPressed: _incrementQuantity,
-                      ),
-                    ],
+                : Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Color(0xFF85C3DE)), 
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          icon: const Icon(Icons.remove),
+                          onPressed: _decrementQuantity,
+                        ),
+                        Text('$_quantity'),
+                        IconButton(
+                          icon: const Icon(Icons.add),
+                          onPressed: _incrementQuantity,
+                        ),
+                      ],
+                    ),
                   ),
           ],
         ),

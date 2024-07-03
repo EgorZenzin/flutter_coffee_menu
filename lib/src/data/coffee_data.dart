@@ -14,7 +14,7 @@ List<Map<String, String>> getCoffeeItemsForCategory(String category) {
       {'name': 'Чай с жасмином', 'price': '129 руб', 'imageUrl': 'assets/images/coffee2.png', 'category': 'Чай'},
       {'name': 'Мокка', 'price': '219 руб', 'imageUrl': 'assets/images/coffee.png', 'category': 'Авторские напитки'},
       {'name': 'Фраппучино', 'price': '229 руб', 'imageUrl': 'assets/images/coffee2.png', 'category': 'Авторские напитки'},
-      {'name': 'Карамельный латте', 'price': '239 руб', 'imageUrl': 'assets/images/coffee.png', 'category': 'Авторские напитки'},
+      {'name': 'Банановый латте', 'price': '239 руб', 'imageUrl': 'assets/images/coffee.png', 'category': 'Авторские напитки'},
       {'name': 'Мятный мокка', 'price': '249 руб', 'imageUrl': 'assets/images/coffee2.png', 'category': 'Авторские напитки'},
     ];
 
