@@ -25,9 +25,9 @@ class CategorySection extends StatelessWidget {
           physics: const NeverScrollableScrollPhysics(),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            crossAxisSpacing: 8,
-            mainAxisSpacing: 8,
-            childAspectRatio: 0.6,
+            mainAxisSpacing: 16.0,
+            crossAxisSpacing: 16.0,
+            mainAxisExtent: 200,
           ),
           itemCount: coffeeItems.length,
           itemBuilder: (context, index) => CoffeeItem(

@@ -32,10 +32,12 @@ class _CoffeeItemState extends State<CoffeeItem> {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return SizedBox(
+      width: 180,
+      child: Card(
       color: Colors.white,
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(2),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -57,13 +59,14 @@ class _CoffeeItemState extends State<CoffeeItem> {
                       style: TextStyle(color: Colors.white) 
                     ),
                     style: ButtonStyle(
-                      backgroundColor: WidgetStateProperty.all<Color>(Color(0xFF85C3DE)), 
+                      backgroundColor: WidgetStateProperty.all<Color>(const Color(0xFF85C3DE)), 
                     ),
                   )
                 : Container(
+                    height: 36,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Color(0xFF85C3DE)),
-                      borderRadius: BorderRadius.circular(15.0)
+                      border: Border.all(color: const Color(0xFF85C3DE)),
+                      borderRadius: BorderRadius.circular(30.0)
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(5.0),
@@ -88,6 +91,7 @@ class _CoffeeItemState extends State<CoffeeItem> {
           ],
         ),
       ),
+      )
     );
   }
 }  
