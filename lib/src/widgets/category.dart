@@ -27,7 +27,7 @@ class CategorySection extends StatelessWidget {
             crossAxisCount: 2,
             mainAxisSpacing: 16.0,
             crossAxisSpacing: 16.0,
-            mainAxisExtent: 200,
+            mainAxisExtent: 210,
           ),
           itemCount: coffeeItems.length,
           itemBuilder: (context, index) => CoffeeItem(

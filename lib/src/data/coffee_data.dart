@@ -15,7 +15,7 @@ List<Map<String, String>> getCoffeeItemsForCategory(String category) {
       {'name': 'Мокка', 'price': '219 руб', 'imageUrl': 'assets/images/coffee.png', 'category': 'Авторские напитки'},
       {'name': 'Фраппучино', 'price': '229 руб', 'imageUrl': 'assets/images/coffee2.png', 'category': 'Авторские напитки'},
       {'name': 'Аффогато', 'price': '239 руб', 'imageUrl': 'assets/images/coffee.png', 'category': 'Авторские напитки'},
-      {'name': 'Мятный мокка', 'price': '249 руб', 'imageUrl': 'assets/images/coffee2.png', 'category': 'Авторские напитки'},
+      {'name': 'Брюло', 'price': '249 руб', 'imageUrl': 'assets/images/coffee2.png', 'category': 'Авторские напитки'},
     ];
 
     return items.where((item) => item['category'] == category).toList();
