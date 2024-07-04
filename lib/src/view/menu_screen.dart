@@ -136,6 +136,13 @@ class _CoffeeShopPageState extends State<CoffeeShopPage> with SingleTickerProvid
                         labelStyle: TextStyle(
                           color: isSelected ? CoffeeAppColors.activeCategoryTextColor : CoffeeAppColors.categoryTextColor,
                         ),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),    
+                          side: const BorderSide(
+                            width: 0,
+                            color: Colors.transparent,
+                          ),
+                        ), 
                       ),
                     );
                   }).toList(),
